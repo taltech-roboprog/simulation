@@ -1,0 +1,543 @@
+#VRML_SIM R2023b utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is a proto file for Webots for TalTech IT-building robotics lab
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Window.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Door.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/cabinet/protos/Cabinet.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/tables/protos/Table.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/chairs/protos/OfficeChair.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/BrushedAluminium.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Roughcast.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/LabFloor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Grey.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/PaintedWood.proto"
+
+
+PROTO ICTLab [
+  field  SFVec3f     translation     0 0 0
+  field  SFRotation  rotation        0 0 1 0
+]
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    children [
+      Floor {
+        name "floor1"
+        size 7.65 3.15
+        tileSize 1 1
+        appearance LabFloor {
+          textureTransform TextureTransform {
+            scale 2 2
+          }
+        }
+      }
+      OfficeChair {
+        translation 2.62 0.18 0
+        enablePhysics FALSE
+      }
+      Wall {
+        translation -3.725 -1.325 0
+        rotation 0 0.00022681898833087582 0.9999999742765728 -1.570565307179586
+        name "wall(1)"
+        size 0.5 0.2 2.4
+        appearance Roughcast {
+          textureTransform TextureTransform {
+            scale 7 2.4
+          }
+        }
+      }
+      Wall {
+        translation 3.725 1.275 0.00109501
+        rotation 0 0.00022681898833087582 0.9999999742765728 -1.570565307179586
+        name "wall(10)"
+        size 0.5 0.2 2.4
+        appearance Roughcast {
+          textureTransform TextureTransform {
+            scale 7 2.4
+          }
+        }
+      }
+      Floor {
+        translation -0.625 5.525 0
+        name "floor2"
+        size 6.4 7.9
+        tileSize 1 1
+        appearance LabFloor {
+          textureTransform TextureTransform {
+            scale 2 2
+          }
+        }
+      }
+      Window {
+        translation -1.59962 7.72205 0
+        rotation 0 0 1 -0.95993
+        name "window(1)"
+        size 0.2 4.9 2.4
+        bottomWallHeight 0
+        windowHeight 2.4
+        frameSize 0.03 0.02 0.05
+        windowSillSize 0.1 0
+      }
+      Window {
+        translation 3.725 -0.175 0
+        name "window(2)"
+        size 0.2 2.4 2.4
+        bottomWallHeight 1
+        frameSize 0.03 0.02 0.05
+        windowSillSize 0.1 0
+      }
+      Table {
+        translation -3.21 1.09 0
+        size 0.8 1.5 0.74
+        feetPadding 0.05
+        trayAppearance PBRAppearance {
+          baseColor 0.926 0.912 0.698
+          roughness 0.8
+          metalness 0
+        }
+        legAppearance BrushedAluminium {
+          colorOverride 0.333 0.341 0.325
+        }
+      }
+      Table {
+        translation 3.21 0.16 0
+        name "table(8)"
+        size 0.8 1.5 0.74
+        feetPadding 0.05
+        trayAppearance PBRAppearance {
+          baseColor 0.926 0.912 0.698
+          roughness 0.8
+          metalness 0
+        }
+        legAppearance BrushedAluminium {
+          colorOverride 0.333 0.341 0.325
+        }
+      }
+      Table {
+        translation 1.97 2.12 0
+        name "table(1)"
+        size 0.8 1.5 0.74
+        feetPadding 0.05
+        trayAppearance PBRAppearance {
+          baseColor 0.926 0.912 0.698
+          roughness 0.8
+          metalness 0
+        }
+        legAppearance BrushedAluminium {
+          colorOverride 0.333 0.341 0.325
+        }
+      }
+      Table {
+        translation 1.97 3.63 0
+        name "table(2)"
+        size 0.8 1.5 0.74
+        feetPadding 0.05
+        trayAppearance PBRAppearance {
+          baseColor 0.926 0.912 0.698
+          roughness 0.8
+          metalness 0
+        }
+        legAppearance BrushedAluminium {
+          colorOverride 0.333 0.341 0.325
+        }
+      }
+      Table {
+        translation 1.97 5.14 0
+        name "table(9)"
+        size 0.8 1.5 0.74
+        feetPadding 0.05
+        trayAppearance PBRAppearance {
+          baseColor 0.926 0.912 0.698
+          roughness 0.8
+          metalness 0
+        }
+        legAppearance BrushedAluminium {
+          colorOverride 0.333 0.341 0.325
+        }
+      }
+      Table {
+        translation 0.669846 6.32 0
+        rotation 0 0 1 1.5709
+        name "table(3)"
+        size 0.8 1.5 0.74
+        feetPadding 0.05
+        trayAppearance PBRAppearance {
+          baseColor 0.926 0.912 0.698
+          roughness 0.8
+          metalness 0
+        }
+        legAppearance BrushedAluminium {
+          colorOverride 0.333 0.341 0.325
+        }
+      }
+      Table {
+        translation -2.73288 6.11223 0
+        rotation 0 0 1 -0.959931
+        name "table(6)"
+        size 0.8 1.5 0.74
+        feetPadding 0.05
+        trayAppearance PBRAppearance {
+          baseColor 0.926 0.912 0.698
+          roughness 0.8
+          metalness 0
+        }
+        legAppearance BrushedAluminium {
+          colorOverride 0.333 0.341 0.325
+        }
+      }
+      Table {
+        translation -1.49612 6.97845 0
+        rotation 0 0 1 -0.959931
+        name "table(7)"
+        size 0.8 1.5 0.74
+        feetPadding 0.05
+        trayAppearance PBRAppearance {
+          baseColor 0.926 0.912 0.698
+          roughness 0.8
+          metalness 0
+        }
+        legAppearance BrushedAluminium {
+          colorOverride 0.333 0.341 0.325
+        }
+      }
+      Table {
+        translation 0.81032 1.77 0
+        rotation 0 0 1 1.5709
+        name "table(4)"
+        size 0.8 1.5 0.74
+        feetPadding 0.05
+        trayAppearance PBRAppearance {
+          baseColor 0.926 0.912 0.698
+          roughness 0.8
+          metalness 0
+        }
+        legAppearance BrushedAluminium {
+          colorOverride 0.333 0.341 0.325
+        }
+      }
+      Table {
+        translation 0.319857 7.48 0
+        name "table(5)"
+        size 0.8 1.5 0.74
+        feetPadding 0.05
+        trayAppearance PBRAppearance {
+          baseColor 0.926 0.912 0.698
+          roughness 0.8
+          metalness 0
+        }
+        legAppearance BrushedAluminium {
+          colorOverride 0.333 0.341 0.325
+        }
+      }
+      Cabinet {
+        translation 2.21896 -1.37212 0
+        rotation 0 0 1 1.57
+        rowsHeights [
+          0.42, 0.42, 0.42, 0.42
+        ]
+        columnsWidths [
+          0.35, 0.35
+        ]
+        layout [
+          "LeftSidedDoor (1, 1, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 2, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 3, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 4, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 1, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 2, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 3, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 4, 1, 1, 1.5)"
+        ]
+        primaryAppearance PaintedWood {
+          colorOverride 0.9 0.9 0.9
+        }
+        secondaryAppearance PaintedWood {
+          colorOverride 0.9 0.9 0.9
+        }
+      }
+      Cabinet {
+        translation 1.45896 -1.37149 0
+        rotation 0 0 1 1.57
+        name "cabinet(1)"
+        rowsHeights [
+          0.42, 0.42, 0.42, 0.42
+        ]
+        columnsWidths [
+          0.35, 0.35
+        ]
+        layout [
+          "LeftSidedDoor (1, 1, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 2, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 3, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 4, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 1, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 2, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 3, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 4, 1, 1, 1.5)"
+        ]
+        primaryAppearance PaintedWood {
+          colorOverride 0.9 0.9 0.9
+        }
+        secondaryAppearance PaintedWood {
+          colorOverride 0.9 0.9 0.9
+        }
+      }
+      Cabinet {
+        translation 0.69896 -1.37079 0
+        rotation 0 0 1 1.57
+        name "cabinet(2)"
+        rowsHeights [
+          0.42, 0.42, 0.42, 0.42
+        ]
+        columnsWidths [
+          0.35, 0.35
+        ]
+        layout [
+          "LeftSidedDoor (1, 1, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 2, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 3, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 4, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 1, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 2, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 3, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 4, 1, 1, 1.5)"
+        ]
+        primaryAppearance PaintedWood {
+          colorOverride 0.9 0.9 0.9
+        }
+        secondaryAppearance PaintedWood {
+          colorOverride 0.9 0.9 0.9
+        }
+      }
+      Cabinet {
+        translation -0.06104 -1.37004 0
+        rotation 0 0 1 1.57
+        name "cabinet(3)"
+        rowsHeights [
+          0.42, 0.42, 0.42, 0.42
+        ]
+        columnsWidths [
+          0.35, 0.35
+        ]
+        layout [
+          "LeftSidedDoor (1, 1, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 2, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 3, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 4, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 1, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 2, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 3, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 4, 1, 1, 1.5)"
+        ]
+        primaryAppearance PaintedWood {
+          colorOverride 0.9 0.9 0.9
+        }
+        secondaryAppearance PaintedWood {
+          colorOverride 0.9 0.9 0.9
+        }
+      }
+      Cabinet {
+        translation -0.82104 -1.36932 0
+        rotation 0 0 1 1.57
+        name "cabinet(4)"
+        rowsHeights [
+          0.42, 0.42, 0.42, 0.42
+        ]
+        columnsWidths [
+          0.35, 0.35
+        ]
+        layout [
+          "LeftSidedDoor (1, 1, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 2, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 3, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 4, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 1, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 2, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 3, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 4, 1, 1, 1.5)"
+        ]
+        primaryAppearance PaintedWood {
+          colorOverride 0.9 0.9 0.9
+        }
+        secondaryAppearance PaintedWood {
+          colorOverride 0.9 0.9 0.9
+        }
+      }
+      Cabinet {
+        translation -1.58104 -1.36856 0
+        rotation 0 0 1 1.57
+        name "cabinet(5)"
+        rowsHeights [
+          0.42, 0.42, 0.42, 0.42
+        ]
+        columnsWidths [
+          0.35, 0.35
+        ]
+        layout [
+          "LeftSidedDoor (1, 1, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 2, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 3, 1, 1, 1.5)"
+          "LeftSidedDoor (1, 4, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 1, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 2, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 3, 1, 1, 1.5)"
+          "LeftSidedDoor (2, 4, 1, 1, 1.5)"
+        ]
+        primaryAppearance PaintedWood {
+          colorOverride 0.9 0.9 0.9
+        }
+        secondaryAppearance PaintedWood {
+          colorOverride 0.9 0.9 0.9
+        }
+      }
+      Wall {
+        translation -3.725 1.8 0.000485371
+        rotation 0 0.00022681898833087582 0.9999999742765728 -1.570565307179586
+        name "wall(2)"
+        size 3.75 0.2 2.4
+        appearance Roughcast {
+          textureTransform TextureTransform {
+            scale 7 2.4
+          }
+        }
+      }
+      Wall {
+        translation 1.725 6.825 0.000972918
+        name "wall(5)"
+        size 1.7 0.2 2.4
+        appearance Roughcast {
+          textureTransform TextureTransform {
+            scale 7 2.4
+          }
+        }
+      }
+      Wall {
+        translation 3.1 1.47 0.000972918
+        name "wall(9)"
+        size 1.45 0.2 2.4
+        appearance Roughcast {
+          textureTransform TextureTransform {
+            scale 7 2.4
+          }
+        }
+      }
+      Wall {
+        translation -3.72589 5.48 -0.000349334
+        rotation 0 0.00022681898833087582 0.9999999742765728 -1.570565307179586
+        name "wall(3)"
+        size 1.61 0.2 2.4
+        appearance Roughcast {
+          textureTransform TextureTransform {
+            scale 7 2.4
+          }
+        }
+      }
+      Wall {
+        translation 0.823481 8.1 9.27238e-05
+        rotation 0 0.00022681898833087582 0.9999999742765728 -1.570565307179586
+        name "wall(6)"
+        size 2.75 0.2 2.4
+        appearance Roughcast {
+          textureTransform TextureTransform {
+            scale 7 2.4
+          }
+        }
+      }
+      Wall {
+        translation 2.47427 4.17014 0.0013585
+        rotation 0 0.00022681898833087582 0.9999999742765728 -1.570565307179586
+        name "wall(8)"
+        size 5.2 0.2 2.4
+        appearance Roughcast {
+          textureTransform TextureTransform {
+            scale 7 2.4
+          }
+        }
+      }
+      Wall {
+        translation 0 -1.475 0
+        rotation 0 0.00022681898833087582 0.9999999742765728 0
+        name "wall(11)"
+        size 7.65 0.2 2.4
+        appearance Roughcast {
+          textureTransform TextureTransform {
+            scale 7 2.4
+          }
+        }
+      }
+      Wall {
+        translation 0.591234 9.25987 -8.40269e-05
+        rotation 0 0 1 0.610865
+        name "wall(4)"
+        size 0.46 0.2 2.4
+        appearance Roughcast {
+          textureTransform TextureTransform {
+            scale 7 2.4
+          }
+        }
+      }
+      Wall {
+        translation -3.6846 6.26483 -8.40269e-05
+        rotation 0 0 1 0.610865
+        name "wall(7)"
+        size 0.2 0.2 2.4
+        appearance Roughcast {
+          textureTransform TextureTransform {
+            scale 7 2.4
+          }
+        }
+      }
+      Door {
+        translation -3.725 -0.57499 1.13387e-05
+        position -1.5
+        wallAppearance Roughcast {
+          textureTransform TextureTransform {
+            scale 7 2.4
+          }
+        }
+        frameAppearance Roughcast {
+          textureTransform TextureTransform {
+            scale 1 2.4
+          }
+        }
+      }
+      Door {
+        translation -3.725 4.175 1.13387e-05
+        rotation -0.581329088895979 0.5726190875640585 -0.5780690883974646 0.000396075
+        name "door(1)"
+        position -1.5000000005630203
+        wallAppearance Roughcast {
+          textureTransform TextureTransform {
+            scale 7 2.4
+          }
+        }
+        frameAppearance Roughcast {
+          textureTransform TextureTransform {
+            scale 1 2.4
+          }
+        }
+      }
+      Pose {
+        translation -1.55 -1.15 1.84
+        children [
+          Shape {
+            appearance Grey {
+              textureTransform TextureTransform {
+                scale 2 2
+              }
+            }
+            geometry Cylinder {
+              height 0.21
+              radius 0.025
+            }
+          }
+        ]
+      }
+    ]
+  }
+}
