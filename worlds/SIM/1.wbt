@@ -1,11 +1,12 @@
 #VRML_SIM R2023b utf8
 
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+
 EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Turtlebot4.proto"
-EXTERNPROTO "/home/gert/roboprog/simulation/worlds/ICTLab.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Plywood.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Oak.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "../ICTLab.proto"
 
 WorldInfo {
   info [
@@ -35,6 +36,7 @@ Turtlebot4 {
 ICTLab {
   translation 0.317676 -0.066878 -8.88178e-16
 }
+
 Wall {
   translation -1.40015 2.00785 -0.00259883
   rotation -0.00022772198819084869 0 0.9999999740713477 1.57103

@@ -13,7 +13,6 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/BrushedAluminium.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/Roughcast.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/LabFloor.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Grey.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/appearances/protos/PaintedWood.proto"
 
 
@@ -521,22 +520,6 @@ PROTO ICTLab [
             scale 1 2.4
           }
         }
-      }
-      Pose {
-        translation -1.55 -1.15 1.84
-        children [
-          Shape {
-            appearance Grey {
-              textureTransform TextureTransform {
-                scale 2 2
-              }
-            }
-            geometry Cylinder {
-              height 0.21
-              radius 0.025
-            }
-          }
-        ]
       }
     ]
   }
