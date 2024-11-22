@@ -1,0 +1,25 @@
+#!/bin/bash
+
+ssh-keygen -f "$HOME/iti0201_key" -t rsa -b 4096
+
+echo 'Copy the following to TalTech GitLab "Preferences -> SSH Keys -> Add new key"'
+
+cat "$HOME/iti0201_key.pub"
+
+while true; do
+  read -p "Do you want to install the key as default id_rsa file (.ssh/id_rsa)? (y/n): " choice
+  case "$choice" in
+    y|Y )
+      echo "Installing..."
+      mv "$HOME/iti0201_key" "$HOME/.ssh/id_rsa"
+      mv "$HOME/iti0201_key.pub" "$HOME/.ssh/id_rsa.pub"
+      break
+      ;;
+    n|N )
+      exit 1
+      ;;
+    * )
+      echo "Invalid input. Please enter 'y' or 'n'."
+      ;;
+  esac
+done
