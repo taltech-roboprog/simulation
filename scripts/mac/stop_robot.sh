@@ -1,3 +1,3 @@
 #!/bin/bash
 
-pkill -9 -f webots-bin
+pkill -9 -f webots
