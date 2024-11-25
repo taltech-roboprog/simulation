@@ -1,0 +1,1863 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/apartment_structure/protos/Wall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Plywood.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Oak.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Turtlebot4.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/LabFloor.proto"
+
+WorldInfo {
+  info [
+    "TurtleBot4 simulation"
+  ]
+  title "TurtleBot4 simulation"
+  basicTimeStep 20
+}
+
+Viewpoint {
+  orientation -0.26156885932496543 -0.8715669829180679 0.41467182942482655 5.206800796895686
+  position -5.368380478429851 7.218434912876141 12.916771260993373
+  follow "Turtlebot4"
+  followType "Mounted Shot"
+}
+Floor {
+        name "floor1"
+        translation 2.5 1.5 0
+        size 6.65 4.15
+        tileSize 1 1
+        appearance LabFloor {
+          textureTransform TextureTransform {
+            scale 2 2
+          }
+        }
+}
+
+
+TexturedBackground {
+  texture "empty_office"
+  skybox FALSE
+}
+Turtlebot4 {
+  translation 4.37924 2.8557 0.0804414
+  rotation -0.006961188391451269 5.8357286515156046e-05 0.9999757689317307 3.12636
+  controller "<extern>"
+  controllerArgs [
+    ""
+  ]
+}
+Wall {
+  translation 0.315 0 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_0_2"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.4725 0 0
+  name "horizontal_wall_0_3"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.63 0 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_0_4"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.7875 0 0
+  name "horizontal_wall_0_5"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.945 0 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_0_6"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.1025 0 0
+  name "horizontal_wall_0_7"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.26 0 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_0_8"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.4175 0 0
+  name "horizontal_wall_0_9"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.575 0 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_0_10"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.7325 0 0
+  name "horizontal_wall_0_11"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.89 0 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_0_12"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.0475 0 0
+  name "horizontal_wall_0_13"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.205 0 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_0_14"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.3625 0 0
+  name "horizontal_wall_0_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.52 0 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_0_16"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.6775 0 0
+  name "horizontal_wall_0_17"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.835 0 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_0_18"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.9925 0 0
+  name "horizontal_wall_0_19"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.15 0 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_0_20"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.3075 0 0
+  name "horizontal_wall_0_21"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.465 0 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_0_22"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.6225 0 0
+  name "horizontal_wall_0_23"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.78 0 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_0_24"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.9375 0 0
+  name "horizontal_wall_0_25"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.095 0 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_0_26"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.2525 0 0
+  name "horizontal_wall_0_27"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.41 0 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_0_28"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.5675 0 0
+  name "horizontal_wall_0_29"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 0 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_0_30"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 0.1575 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_1_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 0.315 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_2_30"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 0.4725 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_3_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 0.63 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_4_2"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.4725 0.63 0
+  name "horizontal_wall_4_3"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.63 0.63 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_4_4"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.7875 0.63 0
+  name "horizontal_wall_4_5"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.945 0.63 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_4_6"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.1025 0.63 0
+  name "horizontal_wall_4_7"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.26 0.63 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_4_8"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.4175 0.63 0
+  name "horizontal_wall_4_9"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.575 0.63 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_4_10"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.7325 0.63 0
+  name "horizontal_wall_4_11"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.89 0.63 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_4_12"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.0475 0.63 0
+  name "horizontal_wall_4_13"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.205 0.63 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_4_14"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.3625 0.63 0
+  name "horizontal_wall_4_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.52 0.63 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_4_16"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.6775 0.63 0
+  name "horizontal_wall_4_17"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.835 0.63 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_4_18"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.9925 0.63 0
+  name "horizontal_wall_4_19"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.15 0.63 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_4_20"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.3075 0.63 0
+  name "horizontal_wall_4_21"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.465 0.63 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_4_22"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.6225 0.63 0
+  name "horizontal_wall_4_23"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.78 0.63 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_4_24"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.9375 0.63 0
+  name "horizontal_wall_4_25"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.095 0.63 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_4_26"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 0.63 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_4_30"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 0.7875 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_5_1"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 0.7875 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_5_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 0.945 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_6_2"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 0.945 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_6_30"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 1.1025 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_7_1"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 1.1025 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_7_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 1.26 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_8_2"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.945 1.26 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_8_6"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.1025 1.26 0
+  name "horizontal_wall_8_7"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.26 1.26 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_8_8"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.4175 1.26 0
+  name "horizontal_wall_8_9"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.575 1.26 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_8_10"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.7325 1.26 0
+  name "horizontal_wall_8_11"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.89 1.26 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_8_12"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.0475 1.26 0
+  name "horizontal_wall_8_13"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.205 1.26 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_8_14"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.3625 1.26 0
+  name "horizontal_wall_8_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.52 1.26 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_8_16"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.6775 1.26 0
+  name "horizontal_wall_8_17"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.835 1.26 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_8_18"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.9925 1.26 0
+  name "horizontal_wall_8_19"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.15 1.26 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_8_20"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.3075 1.26 0
+  name "horizontal_wall_8_21"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.465 1.26 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_8_22"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.6225 1.26 0
+  name "horizontal_wall_8_23"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.78 1.26 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_8_24"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.9375 1.26 0
+  name "horizontal_wall_8_25"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.095 1.26 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_8_26"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.2525 1.26 0
+  name "horizontal_wall_8_27"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.41 1.26 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_8_28"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.5675 1.26 0
+  name "horizontal_wall_8_29"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 1.26 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_8_30"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 1.4175 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_9_1"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 1.4175 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_9_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 1.575 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_10_2"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 1.575 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_10_30"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 1.7325 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_11_1"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 1.7325 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_11_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 1.89 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_12_2"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.4725 1.89 0
+  name "horizontal_wall_12_3"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.63 1.89 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_12_4"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.7875 1.89 0
+  name "horizontal_wall_12_5"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.945 1.89 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_12_6"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.1025 1.89 0
+  name "horizontal_wall_12_7"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.26 1.89 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_12_8"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.4175 1.89 0
+  name "horizontal_wall_12_9"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.575 1.89 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_12_10"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.7325 1.89 0
+  name "horizontal_wall_12_11"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.89 1.89 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_12_12"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.0475 1.89 0
+  name "horizontal_wall_12_13"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.205 1.89 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_12_14"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.3625 1.89 0
+  name "horizontal_wall_12_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.52 1.89 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_12_16"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.6775 1.89 0
+  name "horizontal_wall_12_17"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.835 1.89 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_12_18"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.9925 1.89 0
+  name "horizontal_wall_12_19"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.15 1.89 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_12_20"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.3075 1.89 0
+  name "horizontal_wall_12_21"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.465 1.89 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_12_22"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.6225 1.89 0
+  name "horizontal_wall_12_23"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.78 1.89 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_12_24"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.9375 1.89 0
+  name "horizontal_wall_12_25"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.095 1.89 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_12_26"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 1.89 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_12_30"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 2.0475 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_13_1"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 2.0475 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_13_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 2.205 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_14_2"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 2.205 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_14_30"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 2.3625 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_15_1"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 2.3625 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_15_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 2.52 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_16_2"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.945 2.52 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_16_6"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.1025 2.52 0
+  name "horizontal_wall_16_7"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.26 2.52 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_16_8"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.4175 2.52 0
+  name "horizontal_wall_16_9"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.575 2.52 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_16_10"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.7325 2.52 0
+  name "horizontal_wall_16_11"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.89 2.52 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_16_12"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.0475 2.52 0
+  name "horizontal_wall_16_13"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.205 2.52 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_16_14"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.3625 2.52 0
+  name "horizontal_wall_16_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.52 2.52 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_16_16"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.6775 2.52 0
+  name "horizontal_wall_16_17"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.835 2.52 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_16_18"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.9925 2.52 0
+  name "horizontal_wall_16_19"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.15 2.52 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_16_20"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.3075 2.52 0
+  name "horizontal_wall_16_21"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.465 2.52 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_16_22"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.6225 2.52 0
+  name "horizontal_wall_16_23"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.78 2.52 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_16_24"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.9375 2.52 0
+  name "horizontal_wall_16_25"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.095 2.52 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_16_26"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.2525 2.52 0
+  name "horizontal_wall_16_27"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.41 2.52 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_16_28"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.5675 2.52 0
+  name "horizontal_wall_16_29"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 2.52 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_16_30"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 2.6775 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_17_1"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 2.6775 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_17_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 2.835 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_18_2"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 2.835 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_18_30"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 2.9925 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_19_1"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 2.9925 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "vertical_wall_19_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.315 3.15 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_20_2"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.4725 3.15 0
+  name "horizontal_wall_20_3"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.63 3.15 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_20_4"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.7875 3.15 0
+  name "horizontal_wall_20_5"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 0.945 3.15 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_20_6"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.1025 3.15 0
+  name "horizontal_wall_20_7"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.26 3.15 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_20_8"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.4175 3.15 0
+  name "horizontal_wall_20_9"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.575 3.15 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_20_10"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.7325 3.15 0
+  name "horizontal_wall_20_11"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 1.89 3.15 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_20_12"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.0475 3.15 0
+  name "horizontal_wall_20_13"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.205 3.15 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_20_14"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.3625 3.15 0
+  name "horizontal_wall_20_15"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.52 3.15 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_20_16"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.6775 3.15 0
+  name "horizontal_wall_20_17"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.835 3.15 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_20_18"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 2.9925 3.15 0
+  name "horizontal_wall_20_19"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.15 3.15 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_20_20"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.3075 3.15 0
+  name "horizontal_wall_20_21"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.465 3.15 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_20_22"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.6225 3.15 0
+  name "horizontal_wall_20_23"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.78 3.15 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_20_24"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 3.9375 3.15 0
+  name "horizontal_wall_20_25"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.095 3.15 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_20_26"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.2525 3.15 0
+  name "horizontal_wall_20_27"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.41 3.15 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_20_28"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.5675 3.15 0
+  name "horizontal_wall_20_29"
+  size 0.3 0.015 0.28
+  appearance Plywood {
+    textureTransform TextureTransform {
+    }
+  }
+}
+Wall {
+  translation 4.725 3.15 0
+  rotation -0.00022772198819084869 0 0.9999999740713477 1.57103
+  name "connector_20_30"
+  size 0.015 0.015 0.28
+  appearance Oak {
+    textureTransform TextureTransform {
+    }
+  }
+}

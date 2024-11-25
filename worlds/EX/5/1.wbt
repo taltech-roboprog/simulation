@@ -1,0 +1,55 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Turtlebot4.proto"
+EXTERNPROTO "../../Pipe.proto"
+EXTERNPROTO "../../LabMazeWall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/LabFloor.proto"
+
+WorldInfo {
+  info [
+    "TurtleBot4 simulation"
+  ]
+  title "TurtleBot4 simulation"
+  basicTimeStep 20
+}
+Viewpoint {
+  orientation 0.4481918329191723 -0.14362583610448576 -0.8823240335091413 3.603722825567339
+  position 1.795751137261664 -0.694384685375451 4.428057335657846
+  follow "Turtlebot4"
+  followType "Mounted Shot"
+}
+Floor {
+  translation -1 2.5 0
+  name "floor1"
+  size 3.65 6.15
+  tileSize 1 1
+  appearance LabFloor {
+    textureTransform TextureTransform {
+      scale 2 2
+    }
+  }
+}
+TexturedBackground {
+  texture "empty_office"
+  skybox FALSE
+}
+Turtlebot4 {
+  translation -1.79362 2.01951 -0.00530866
+  rotation -0.00655490103292132 0.025310103988366247 0.999658157526135 -0.5390053071795862
+  controller "<extern>"
+  controllerArgs [
+    ""
+  ]
+}
+LabMazeWall {
+}
+Pipe {
+  name "Pipe_1"
+  translation -0.631728 2.07036 0.105
+}
+Pipe {
+  name "Pipe_2"
+  translation -1.11076 1.25122 0.105
+}
