@@ -3,7 +3,7 @@
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Turtlebot4.proto"
 EXTERNPROTO "../../Pipe.proto"
-EXTERNPROTO "../..LabMazeWall.proto"
+EXTERNPROTO "../../LabMazeWall.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/LabFloor.proto"
 
