@@ -1,0 +1,72 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Turtlebot4.proto"
+EXTERNPROTO "../../ICTLab.proto"
+EXTERNPROTO "../../PipeColor.proto"
+EXTERNPROTO "../../LabMazeWall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Yellow.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Red.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Blue.proto"
+
+
+EXTERNPROTO "../../ConeShape.proto"
+EXTERNPROTO "../../CubeShape.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Grey.proto"
+
+WorldInfo {
+  info [
+    "TurtleBot4 simulation"
+  ]
+  title "TurtleBot4 simulation"
+  basicTimeStep 20
+}
+Viewpoint {
+  orientation 0.3891761259651542 0.1446082894254048 -0.9097419335219262 2.383929752379074
+  position 2.6095818221997686 7.053346639221311 5.923122300264926
+  follow "Turtlebot4"
+  followType "Mounted Shot"
+}
+TexturedBackground {
+  texture "empty_office"
+  skybox FALSE
+}
+Turtlebot4 {
+  translation -1.7551310833677471 2.579061828700493 -0.004896977493451082
+  rotation -0.006817179304105048 0.00904024907717497 0.9999358979269413 -1.324295307179586
+  controller "<extern>"
+  controllerArgs [
+    ""
+  ]
+}
+ICTLab {
+  translation 0.317676 -0.066878 -8.88178e-16
+}
+LabMazeWall {
+}
+CubeShape {
+  name "Special_Cube"
+  translation -0.93237 4.07333 0.025
+  rotation 0 0 1 0.523599
+  color Blue {
+  }
+}
+ConeShape {
+  name "Pipe_1_Cone"
+  translation -0.51847 3.15797 0.05
+  color Blue {
+  }
+}
+CubeShape {
+  name "Pipe_2_Cube"
+  translation -0.4351049563007776 1.9464559678911573 0.025
+  color Grey {
+  }
+}
+ConeShape {
+  name "Pipe_3_Cone"
+  translation -1.2538243126697408 1.3169002492347524 0.05
+  color Blue {
+  }
+}

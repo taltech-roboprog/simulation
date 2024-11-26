@@ -1,0 +1,72 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Turtlebot4.proto"
+EXTERNPROTO "../../Pipe.proto"
+EXTERNPROTO "../../LabMazeWall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/LabFloor.proto"
+
+WorldInfo {
+  info [
+    "TurtleBot4 simulation"
+  ]
+  title "TurtleBot4 simulation"
+  basicTimeStep 20
+}
+Viewpoint {
+  orientation 0.32542110338357866 0.673904216262642 -0.6632904437545051 1.1312504166642603
+  position -4.799589794749304 5.2639384592841845 4.996026118382934
+  follow "Turtlebot4"
+  followType "Mounted Shot"
+}
+Floor {
+  translation -1 2.5 0
+  name "floor1"
+  size 3.65 6.15
+  tileSize 1 1
+  appearance LabFloor {
+    textureTransform TextureTransform {
+      scale 2 2
+    }
+  }
+}
+TexturedBackground {
+  texture "empty_office"
+  skybox FALSE
+}
+Turtlebot4 {
+  translation -1.07 2.61 0
+  controller "<extern>"
+  controllerArgs [
+    ""
+  ]
+}
+LabMazeWall {
+}
+Pipe {
+  name "Pipe_1"
+  translation -1.81608 3.24025 0.10497547499104053
+  rotation 0.003719101206234712 -0.003479728934446612 0.9999870298022673 9.885485503088688e-15
+}
+Pipe {
+  name "Pipe_2"
+  translation -0.12818299999999988 2.50282 0.10497547499104053
+  rotation -0.07455060901871664 -0.013762134537283158 0.9971222644931342 2.3109916862804307e-15
+}
+Pipe {
+  name "Pipe_2(1)"
+  translation -1.8869618020559749 2.021506473625728 0.1049754212850003
+  rotation -0.000141352564486666 -0.00011080099662052825 -0.9999999838712955 0.000761034118938732
+}
+Pipe {
+  name "Pipe_2(2)"
+  translation -0.9478863784820676 1.630958514909973 0.1049743403332819
+  rotation 0.000465579654144953 0.005968675708754309 0.999982078912352 0.00747640535284549
+}
+Pipe {
+  name "Pipe_2(3)"
+  translation -0.5376286266968995 4.2741366787447905 0.10493369758338411
+  rotation 0.0007368158588990962 0.010152585681096813 0.999948189711036 0.007476659614767738
+}
+
