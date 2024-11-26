@@ -5,14 +5,14 @@ EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/project
 EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Turtlebot4.proto"
 EXTERNPROTO "../ICTLab.proto"
 EXTERNPROTO "../LabMazeWall.proto"
+EXTERNPROTO "../PipeColor.proto"
+EXTERNPROTO "../ConeShape.proto"
+EXTERNPROTO "../CubeShape.proto"
 
-EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/PipeColor.proto"
+
 EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Yellow.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Red.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Blue.proto"
-
-EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/ConeShape.proto"
-EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/CubeShape.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Grey.proto"
 
 WorldInfo {
