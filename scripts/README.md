@@ -1,6 +1,6 @@
 # Windows
 
-For Windows use the scripts in ```windows``` directory.
+For Windows use the scripts in ```windows``` directory in a [Git Bash shell](https://git-scm.com/downloads/win).
 
 
 # Debian/Ubuntu
