@@ -8,7 +8,7 @@
    * **Debian:** Use `apt install git`
 3. Clone this repository
    * **Windows:**
-     * Open a "Git Bash shell" by pushing the Windows key and writing "git bash"
+     * Open a "Git Bash shell" by pushing the Windows key and writing "git bash" and right-click on the search result and select "Run as Administrator"
      * Execute `git clone https://github.com/taltech-roboprog/simulation` in the shell
    * **Debian:**
      * Execute `git clone https://github.com/taltech-roboprog/simulation` in the shell
