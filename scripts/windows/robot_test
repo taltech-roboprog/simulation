@@ -1,0 +1,141 @@
+#!/bin/bash
+
+# THIS FILE IS SUPPOSED TO BE RUN IN "GIT BASH" ON WINDOWS
+
+WEBOTS_DIR="/c/Program Files/Webots/msys64/mingw64/bin"
+INSTALL_DIR=INSTALL_DIR_PLACEHOLDER
+
+# Get the absolute path to the script
+SCRIPT_PATH=$(realpath "$0" 2>/dev/null || readlink -f "$0")
+
+# Extract the directory of the script
+SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
+if [[ "$SCRIPT_DIR" == /usr/bin* ]]; then
+    echo "SCRIPT_DIR starts with /usr/bin"
+    SCRIPT_DIR=$INSTALL_DIR
+fi
+
+if [ -d "$WEBOTS_DIR" ]; then
+    cd ~
+    DIRECTORY="iti0201-2025"
+
+    if [ "$#" -lt 3 ]; then
+        echo "USAGE: robot_test [uni-id] [exercise_number] [map_number]"
+        echo "You can add git branch name with -b=[branch]"
+        echo "You can add teammate uni-id (if code is in that student's repository) -t=[teammate_uniid]"
+        echo "You can add team repository with -r=[repo_name]"
+        echo "You can use your SSH key if you specify --key"
+        echo "You can also add optional argument --realism"
+        exit 0
+    fi
+
+    git_user_name=$1
+    exercise_number=$2
+    map_number=$3
+
+    ir_noise=0
+    waiting_time=12
+
+    yaw_start=0
+    realism=0
+    branch=main
+    key=0
+    team=
+    repo=$DIRECTORY
+
+    for i in "$@"
+    do
+    case $i in
+        -t=*|--team=*)
+        team="${i#*=}"
+        shift # past argument=value
+        ;;
+        -r=*|--repo=*)
+        repo="${i#*=}"
+        shift # past argument=value
+        ;;
+        -b=*|--branch=*)
+        branch="${i#*=}"
+        shift # past argument=value
+        ;;
+        --key)
+        key=1
+        shift
+        ;;
+        --realism)
+        realism=1
+        shift
+        ;;
+        --default)
+        DEFAULT=YES
+        shift # past argument with no value
+        ;;
+        *)
+              # unknown option
+        ;;
+    esac
+    done
+
+
+    if [[ ! -z "$team" ]]; then
+        git_address="https://$git_user_name@gitlab.cs.taltech.ee/$team/$repo.git"
+        if [[ "$key" -eq 1 ]]; then
+            git_address="git@gitlab.cs.taltech.ee:$team/$repo.git"
+        fi
+    else
+        git_address="https://$git_user_name@gitlab.cs.taltech.ee/$git_user_name/$repo.git"
+        if [[ "$key" -eq 1 ]]; then
+            git_address="git@gitlab.cs.taltech.ee:$git_user_name/$repo.git"
+        fi
+    fi
+
+
+    echo $git_address
+
+    if [ -d "$DIRECTORY" ]; then
+        echo "Repository already exists. Updating.."
+        cd $DIRECTORY
+        git pull origin $branch
+        git checkout $branch
+    else
+        echo "Repository doesn't exist yet. Creating one now..."
+        git clone -b $branch $git_address $DIRECTORY
+        cd $DIRECTORY
+    fi
+
+    exercise_name=""
+    directory_name=""
+
+    if [ -d "$exercise_number" ]; then
+        cd $exercise_number
+    else
+        echo "Your files do not contain the $exercise_number directory."
+        exit 1
+    fi
+
+    if ! [ -f "robot.py" ]; then
+        echo "Your directory $exercise_number does not contain the necessary robot.py file."
+        exit 1
+    fi
+
+    echo "Realism: $realism"
+
+    CONTROLLERS_DIR=$SCRIPT_DIR/../../controllers
+    echo "$CONTROLLERS_DIR"
+    echo "Symlinking your solution to controller directory..."
+    rm -f $CONTROLLERS_DIR/robot.py
+    ln -s ~/$DIRECTORY/$exercise_number/robot.py $CONTROLLERS_DIR
+
+    if ps -W | grep -v grep | grep webots > /dev/null
+    then
+        echo "Webots is running!"
+    else
+        echo "Webots is not running, starting Webots..."
+	start "$WEBOTS_DIR/webotsw.exe" $SCRIPT_DIR/../../worlds/$exercise_number/$map_number.wbt &
+    fi
+    powershell -Command "& \"$(cygpath -w "$WEBOTS_DIR")\\webots-controller.exe\" --stdout-redirect --stderr-redirect \"$(cygpath -w "$CONTROLLERS_DIR")\\tb4.py\""
+else
+    echo "Webots installation directory not found at $WEBOTS_DIR, please specify the correct installation directory!"
+fi
+
+
