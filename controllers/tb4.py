@@ -10,7 +10,7 @@ import turtlebot
 
 robot_controller = controller.Robot()
 turtlebot.Robot._robot = robot_controller
-spinner = robot.Robot()
+spinner = robot.Robot(turtlebot.Robot())
 
 while robot_controller.step(32) != -1:
     spinner.spin()
