@@ -26,6 +26,7 @@ if [ -d "$WEBOTS_DIR" ]; then
         echo "You can add team repository with -r=[repo_name]"
         echo "You can use your SSH key if you specify --key"
         echo "You can also add optional argument --realism"
+	echo "You can use --lite to load downscaled map version, when facing performance problems"
         exit 0
     fi
 
@@ -42,6 +43,7 @@ if [ -d "$WEBOTS_DIR" ]; then
     key=0
     team=
     repo=$DIRECTORY
+    lite=0
 
     for i in "$@"
     do
@@ -66,6 +68,10 @@ if [ -d "$WEBOTS_DIR" ]; then
         realism=1
         shift
         ;;
+	--lite)
+	lite=1
+	shift
+	;;
         --default)
         DEFAULT=YES
         shift # past argument with no value
@@ -131,7 +137,11 @@ if [ -d "$WEBOTS_DIR" ]; then
         echo "Webots is running!"
     else
         echo "Webots is not running, starting Webots..."
-	start "$WEBOTS_DIR/webotsw.exe" $SCRIPT_DIR/../../worlds/$exercise_number/$map_number.wbt &
+	if [[ "$lite" -eq 1 ]]; then
+    		start "$WEBOTS_DIR/webotsw.exe" $SCRIPT_DIR/../../worlds/$exercise_number/"${map_number}_lite.wbt" &
+	else
+    		start "$WEBOTS_DIR/webotsw.exe" $SCRIPT_DIR/../../worlds/$exercise_number/"${map_number}.wbt" &
+	fi
     fi
     powershell -Command "& \"$(cygpath -w "$WEBOTS_DIR")\\webots-controller.exe\" --stdout-redirect --stderr-redirect \"$(cygpath -w "$CONTROLLERS_DIR")\\tb4.py\""
 else
