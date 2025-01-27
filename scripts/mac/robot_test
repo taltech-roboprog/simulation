@@ -1,11 +1,19 @@
 #!/bin/bash
 
+# setting webots in the system path
+export WEBOTS_HOME="$HOME/Applications/Webots.app/Contents"
+export PYTHONPATH="$WEBOTS_HOME/lib/controller/python"
+export LD_LIBRARY_PATH="$WEBOTS_HOME/lib/controller"  # Required for dynamic libraries
+export DYLD_LIBRARY_PATH="$WEBOTS_HOME/lib/controller"  # Required on macOS
+
 # this path is for a single user, should try with systemwide install and then check with that
-WEBOTS_DIR="$HOME/Applications/Webots.app/Contents/MacOS/webots" # Path to the main Webots executable
+WEBOTS_DIR="$HOME/Applications/Webots.app/Contents/MacOS" # Path to the main Webots executable
 
 # Get the absolute path to the script
 SCRIPT_PATH=$(perl -MCwd -e 'print Cwd::abs_path shift' "$0")
 SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
+
+echo "script dir: $SCRIPT_DIR"
 
 if [ -x "$WEBOTS_DIR" ]; then
     cd ~
@@ -106,10 +114,10 @@ if [ -x "$WEBOTS_DIR" ]; then
         echo "Webots is running!"
     else
         echo "Webots is not running, starting Webots..."
-        open -a "$WEBOTS_DIR" --args "$SCRIPT_DIR/../../worlds/$exercise_number/$map_number.wbt" &
+        open -a "$WEBOTS_DIR/webots" --args "$SCRIPT_DIR/../../worlds/$exercise_number/$map_number.wbt" &
     fi
 
-    WEBOTS_HOME="$WEBOTS_DIR" "$WEBOTS_DIR/Contents/MacOS/webots-controller" --stdout-redirect --stderr-redirect "$CONTROLLERS_DIR/tb4.py"
+    WEBOTS_HOME="$HOME/Applications/Webots.app" "$WEBOTS_DIR/webots-controller" --stdout-redirect --stderr-redirect "$CONTROLLERS_DIR/tb4.py"
 else
     echo "Webots installation directory not found at $WEBOTS_DIR. Please specify the correct installation directory!"
 fi
