@@ -1,0 +1,73 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Turtlebot4.proto"
+EXTERNPROTO "../../ICTLab.proto"
+EXTERNPROTO "../../PipeColor.proto"
+EXTERNPROTO "../../LabMazeWall.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Yellow.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Red.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Blue.proto"
+
+
+EXTERNPROTO "../../ConeShape.proto"
+EXTERNPROTO "../../CubeShape.proto"
+
+
+WorldInfo {
+  info [
+    "TurtleBot4 simulation"
+  ]
+  title "TurtleBot4 simulation"
+  basicTimeStep 20
+}
+Viewpoint {
+  orientation 0.36964102095226514 0.2306757352527961 -0.9000856741416059 2.005111885585411
+  position -0.17293817109831952 6.0001301497074095 2.16844833318935
+  follow "Turtlebot4"
+  followType "Mounted Shot"
+}
+TexturedBackground {
+  texture "empty_office"
+  skybox FALSE
+}
+Turtlebot4 {
+  translation -1.84061 3.53046 -0.00629928
+  rotation -0.005655202936787765 -0.674584354474987 -0.7381761086470551 0.02063822244594177
+  controller "<extern>"
+  controllerArgs [
+    ""
+  ]
+}
+ICTLab {
+  translation 0.317676 -0.066878 -8.88178e-16
+}
+CubeShape {
+  name "wrong"
+  translation -0.58151 4.17268 0.025
+  rotation 0 0 1 0.523599
+  color Red {
+  }
+}
+CubeShape {
+  name "Correct"
+  translation -0.561124 3.66446 0.025
+  rotation 0 0 1 0.785398
+  color Blue {
+  }
+}
+ConeShape {
+  name "MyCone"
+  translation -0.483061 2.80809 0.05
+  color Red {
+  }
+}
+PipeColor {
+  name "Pipe_1"
+  translation -0.04162 3.33533 0.105
+  color Blue {
+  }
+}
+LabMazeWall {
+}

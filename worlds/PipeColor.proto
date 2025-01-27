@@ -1,0 +1,46 @@
+#VRML_SIM R2023b utf8
+# license: Apache License 2.0
+# license url: http://www.apache.org/licenses/LICENSE-2.0
+# This is the proto for the Shapes assignment object.
+
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Grey.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Yellow.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Red.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Blue.proto"
+
+PROTO PipeColor [
+  field  SFString    name            "Pipe"
+  field  SFVec3f     translation     0 0 0.1
+  field  SFRotation  rotation        0 0 1 0
+  field  SFNode      color           NULL
+]
+{
+  Solid {
+    translation IS translation
+    rotation IS rotation
+    name IS name
+    children [
+      Shape {
+        appearance IS color
+        geometry Cylinder {
+          height 0.21
+          radius 0.025
+        }
+      }
+    ]
+    boundingObject Cylinder {
+      height 0.21
+      radius 0.025
+    }
+    physics Physics {
+      density -1
+      mass 0.100000
+      centerOfMass [ 0.00000 0.000000 0.000000 ]
+      inertiaMatrix [
+        9.348200e-06 4.363820e-06 1.288852e-05
+        -3.374340e-06 0.000000e+00 0.000000e+00
+      ]
+    }
+  }
+}
+

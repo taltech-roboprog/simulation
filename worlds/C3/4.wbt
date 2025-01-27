@@ -1,0 +1,83 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Turtlebot4.proto"
+EXTERNPROTO "../ICTLab.proto"
+EXTERNPROTO "../LabMazeWall.proto"
+EXTERNPROTO "../PipeColor.proto"
+EXTERNPROTO "../ConeShape.proto"
+EXTERNPROTO "../CubeShape.proto"
+
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Yellow.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Red.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Blue.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Grey.proto"
+
+WorldInfo {
+  info [
+    "TurtleBot4 simulation"
+  ]
+  title "TurtleBot4 simulation"
+  basicTimeStep 20
+}
+Viewpoint {
+  orientation 0.414801362492781 0.2659587517399296 -0.8701757133171846 2.0235817884812244
+  position 0.24649732223181653 9.107391921178959 7.173042770025197
+  follow "Turtlebot4"
+  followType "Mounted Shot"
+}
+TexturedBackground {
+  texture "empty_office"
+  skybox FALSE
+}
+Turtlebot4 {
+  translation -1.7551310833677471 2.579061828700493 -0.004896977493451082
+  rotation -0.005655202936787765 -0.674584354474987 -0.7381761086470551 0.02063822244594177
+  controller "<extern>"
+  controllerArgs [
+    ""
+  ]
+}
+ICTLab {
+  translation 0.317676 -0.066878 -8.88178e-16
+}
+LabMazeWall {
+}
+CubeShape {
+  name "Special_Cube"
+  translation -0.7899005357016671 0.40518217506054366 0.025
+  color Blue {
+  }
+}
+CubeShape {
+  name "Pipe_1_Cube"
+  translation -1.9912742548865305 4.653106035387837 0.025
+  color Grey {
+  }
+}
+PipeColor {
+  name "Pipe_2"
+  translation -0.7726281039346923 1.7143728739301092 0.105
+  color Blue {
+  }
+}
+PipeColor {
+  name "Pipe_3"
+  translation 0.04846587005189962 3.500422435985149 0.105
+  color Blue {
+  }
+}
+ConeShape {
+  name "Pipe_4_Cone"
+  translation -0.3003437417930581 1.4881301408122516 0.05
+  color Red {
+  }
+}
+ConeShape {
+  name "Pipe_5_Cone"
+  translation -0.8696652757123939 2.5206994538649985 0.05
+  color Yellow {
+  }
+
+}
