@@ -1,0 +1,13 @@
+#!/bin/bash
+
+echo "Please enter your full taltech email address: [uni-id]@taltech.ee"
+
+read email_addr
+
+ssh-keygen -t ed25519 -C $email_addr
+eval "$(ssh-agent -s)"
+ssh-add --apple-use-keychain "$HOME/.ssh/id_ed25519"
+
+echo 'Copy the following to TalTech GitLab "Preferences -> SSH Keys -> Add new key"'
+
+cat "$HOME/.ssh/id_ed25519.pub"
