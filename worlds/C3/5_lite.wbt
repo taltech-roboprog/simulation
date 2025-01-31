@@ -1,0 +1,101 @@
+#VRML_SIM R2023b utf8
+
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
+
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Turtlebot4.proto"
+EXTERNPROTO "../LabMazeWall.proto"
+
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/PipeColor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Yellow.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Red.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Blue.proto"
+
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/ConeShape.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/CubeShape.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Grey.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/floors/protos/Floor.proto"
+EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/LabFloor.proto"
+
+WorldInfo {
+  info [
+    "TurtleBot4 simulation"
+  ]
+  title "TurtleBot4 simulation"
+  basicTimeStep 20
+}
+Viewpoint {
+  orientation -0.39981455461871246 -0.5668160282785725 0.7203248655999215 4.840266083195445
+  position -3.766738049839542 8.17958277685522 8.725312929404764
+  follow "Turtlebot4"
+  followType "Mounted Shot"
+}
+
+
+Floor {
+        name "floor1"
+        translation -0.7 2.5 0
+        size 4.0 6.0
+        tileSize 1 1
+        appearance LabFloor {
+          textureTransform TextureTransform {
+            scale 2 2
+          }
+        }
+}
+
+TexturedBackground {
+  texture "empty_office"
+  skybox FALSE
+}
+Turtlebot4 {
+  translation -1.7551310833677471 2.579061828700493 -0.004896977493451082
+  rotation -0.005655202936787765 -0.674584354474987 -0.7381761086470551 0.02063822244594177
+  controller "<extern>"
+  controllerArgs [
+    ""
+  ]
+}
+LabMazeWall {
+}
+CubeShape {
+  name "Special_Cube"
+  translation 0.05862215149525385 4.004285184751667 0.025
+  color Blue {
+  }
+}
+PipeColor {
+  name "Pipe_1"
+  translation -0.6855840290148156 4.20691950332129 0.105
+  color Blue {
+  }
+}
+CubeShape {
+  name "Pipe_2_Cube"
+  translation -0.23126511212092393 1.57418105103991 0.025
+  color Red {
+  }
+}
+ConeShape {
+  name "Pipe_3_Cone"
+  translation -1.3648620642906315 1.9568110029654378 0.05
+  color Blue {
+  }
+}
+ConeShape {
+  name "Pipe_4_Cone"
+  translation -0.7786292434812883 1.1004967263894887 0.05
+  color Blue {
+  }
+}
+ConeShape {
+  name "Pipe_5_Cone"
+  translation -1.5031140645759793 0.6488583239163318 0.05
+  color Yellow {
+  }
+}
+CubeShape {
+  name "Pipe_6_Cube"
+  translation -0.31363332927576093 2.9212712694337344 0.025
+  color Grey {
+  }
+}
