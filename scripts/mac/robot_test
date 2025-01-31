@@ -26,7 +26,8 @@ if [ -x "$WEBOTS_DIR" ]; then
         echo "You can add team repository with -r=[repo_name]"
         echo "You can use your SSH key if you specify --key"
         echo "You can also add optional argument --realism"
-        exit 0
+        echo "You can use --lite to load the downscaled map version, when facing performance issues"
+	exit 0
     fi
 
     git_user_name=$1
@@ -39,6 +40,7 @@ if [ -x "$WEBOTS_DIR" ]; then
     realism=0
     branch=main
     key=0
+    lite=0
     team=
     repo=$DIRECTORY
 
@@ -60,6 +62,10 @@ if [ -x "$WEBOTS_DIR" ]; then
             key=1
             shift
             ;;
+    	    --lite)
+	    lite=1
+	    shift
+	    ;;
             --realism)
             realism=1
             shift
@@ -73,6 +79,10 @@ if [ -x "$WEBOTS_DIR" ]; then
     else
         git_address="https://$git_user_name@gitlab.cs.taltech.ee/$git_user_name/$repo.git"
         [[ "$key" -eq 1 ]] && git_address="git@gitlab.cs.taltech.ee:$git_user_name/$repo.git"
+    fi
+
+    if [[ "$lite" -eq 1 ]]; then
+	map_number="${3}_lite"
     fi
 
     echo $git_address
