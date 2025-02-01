@@ -21,11 +21,16 @@ Controls the right motor by applying a specified torque in Newton-meters (Nm). A
 Returns the number of ticks counted by the left wheel's encoder as an integer. Based on the robot's specifications, there are 508.8 ticks per complete wheel rotation. This helps track the precise rotation of the left wheel.
 ### get_right_motor_encoder_ticks() -> int
 Returns the number of ticks counted by the right wheel's encoder as an integer. Based on the robot's specifications, there are 508.8 ticks per complete wheel rotation. This helps track the precise rotation of the right wheel.
+## IMU Method
+### get_orientation() -> float
+Returns the robots Yaw value from Inertial Measurement unit, this is the robots current orientation angle in world frame. The value is a float that ranges from [-π; π] corresponding to 360 degrees.
 ## Camera Methods
 ### get_camera_rgb_image() -> np.ndarray
 Returns an image from the robot's RGB camera as a NumPy array in BGRA format (Blue, Green, Red, Alpha channels). The array has dimensions (height, width, 4), where the last dimension represents the BGRA channels (Blue, Green, Red, Alpha). The values are unsigned 8-bit integers.
 ### get_camera_depth_image() -> np.ndarray
 Returns depth image data from the robot's depth camera as a 2D NumPy array with dimensions (height, width). Each pixel value represents the distance to objects in the scene as a floating-point number.
+### get_camera_field_of_view() -> float
+Returns the cameras horizontal field of view in radians, the value is a float.
 ## Infrared Sensor Methods
 ### get_ir_intensities_list() -> list
 Returns a list containing all seven infrared sensor readings in the order: [left, side_left, center_left, center, center_right, side_right, right]. Each value ranges from 0 (far) to 4000 (close).
