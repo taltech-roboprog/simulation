@@ -80,9 +80,9 @@ if [ -x "$WEBOTS_DIR" ]; then
         git_address="https://$git_user_name@gitlab.cs.taltech.ee/$git_user_name/$repo.git"
         [[ "$key" -eq 1 ]] && git_address="git@gitlab.cs.taltech.ee:$git_user_name/$repo.git"
     fi
-
+    map_file=${map_number}
     if [[ "$lite" -eq 1 ]]; then
-	map_number="${3}_lite"
+	map_file="${map_number}_lite"
     fi
 
     echo $git_address
@@ -124,7 +124,7 @@ if [ -x "$WEBOTS_DIR" ]; then
         echo "Webots is running!"
     else
         echo "Webots is not running, starting Webots..."
-        open -a "$WEBOTS_DIR/webots" --args "$SCRIPT_DIR/../../worlds/$exercise_number/$map_number.wbt" &
+        open -a "$WEBOTS_DIR/webots" --args "$SCRIPT_DIR/../../worlds/$exercise_number/${map_file}.wbt" &
     fi
 
     WEBOTS_HOME="$HOME/Applications/Webots.app" "$WEBOTS_DIR/webots-controller" --stdout-redirect --stderr-redirect "$CONTROLLERS_DIR/tb4.py"
