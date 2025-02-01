@@ -37,6 +37,7 @@ if [ -d $WEBOTS_DIR ]; then
     team=
     repo=$DIRECTORY
     lite=0
+    clearcache=
 
     for i in "$@"
     do
@@ -63,6 +64,10 @@ if [ -d $WEBOTS_DIR ]; then
         ;;
 	--lite)
 	lite=1
+	shift
+	;;
+	--clear-cache)
+	clearcache='--clear-cache'
 	shift
 	;;
         --default)
@@ -124,16 +129,16 @@ if [ -d $WEBOTS_DIR ]; then
     rm -f $CONTROLLERS_DIR/robot.py
     ln -s ~/$DIRECTORY/$exercise_number/robot.py $CONTROLLERS_DIR
 
-    map_file="$exercise_number/$map_number.wbt"
-    if [[ "$lite" -eq 1 ]]; then
-        map_file="$exercise_number/${map_number}_lite.wbt"
-    fi
     if ps aux | grep -v grep | grep webots > /dev/null
     then
         echo "Webots is running!"
     else
         echo "Webots is not running, starting Webots..."
-        __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia setsid webots $SCRIPT_DIR/../../worlds/$exercise_number/$map_file.wbt &
+        if [[ "$lite" -eq 1 ]]; then
+            map_number="${map_number}_lite"
+        fi
+	echo "Map is: '$map_number'"
+        __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia setsid webots ${clearcache} $SCRIPT_DIR/../../worlds/$exercise_number/${map_number}.wbt &
     fi
 
     WEBOTS_HOME=$WEBOTS_DIR $WEBOTS_DIR/webots-controller --stdout-redirect --stderr-redirect $CONTROLLERS_DIR/tb4.py
