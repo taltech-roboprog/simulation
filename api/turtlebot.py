@@ -22,7 +22,7 @@ class Robot:
         self._lidar.enable(TIME_STEP)
         self._lidar.enablePointCloud()
         
-        self.inertial_unit = Robot._robot.getDevice('inertial_unit')
+        self.inertial_unit = Robot._robot.getDevice("inertial_unit")
         self.inertial_unit.enable(TIME_STEP)
 
         self._rgb_camera = Robot._robot.getDevice("rgb_camera")
@@ -82,7 +82,7 @@ class Robot:
         """Returns the robot's orientation (yaw) from the inertial unit.
         
         Returns:
-            The current orientation in radians
+            The current orientation in radians.
         
         """
         rotation = self.inertial_unit.getRollPitchYaw()
@@ -188,7 +188,7 @@ class Robot:
         """
         return math.floor(TICKS_PER_RADIANS * self._right_motor_position.getValue())
 
-    def get_camera_params(self):
+    def get_camera_field_of_view(self):
         """Returns the camera HFOV (Horizontal Field of View).
         
         Returns:
