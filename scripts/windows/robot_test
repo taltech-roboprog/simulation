@@ -24,10 +24,10 @@ if [ -d "$WEBOTS_DIR" ]; then
         echo "You can add git branch name with -b=[branch]"
         echo "You can add teammate uni-id (if code is in that student's repository) -t=[teammate_uniid]"
         echo "You can add team repository with -r=[repo_name]"
-        echo "You can use your SSH key if you specify --key"
-        echo "You can also add optional argument --realism"
-	echo "You can use --lite to load downscaled map version, when facing performance problems"
+        echo "Use --realistic to set realistic mode"
+	echo "Use --lite to load downscaled world version for improved performance"
 	echo "Use --clear-cache to update simulator cache"
+        echo "Use --key to use SSH key"
         exit 0
     fi
 
@@ -39,7 +39,7 @@ if [ -d "$WEBOTS_DIR" ]; then
     waiting_time=12
 
     yaw_start=0
-    realism=0
+    realistic=0
     branch=main
     key=0
     team=
@@ -66,8 +66,8 @@ if [ -d "$WEBOTS_DIR" ]; then
         key=1
         shift
         ;;
-        --realism)
-        realism=1
+        --realistic)
+        realistic=1
         shift
         ;;
 	--lite)
@@ -130,7 +130,12 @@ if [ -d "$WEBOTS_DIR" ]; then
         exit 1
     fi
 
-    echo "Realism: $realism"
+    if [[ "$realistic" -eq 1 ]]; then
+        echo "realistic: $realistic"
+	export ITI0201_REALISTIC=1
+    else
+	export ITI0201_REALISTIC=0
+    fi
 
     CONTROLLERS_DIR=$SCRIPT_DIR/../../controllers
     echo "$CONTROLLERS_DIR"
