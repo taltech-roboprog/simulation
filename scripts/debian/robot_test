@@ -18,7 +18,7 @@ if [ -d $WEBOTS_DIR ]; then
         echo "You can add teammate uni-id (if code is in that student's repository) -t=[teammate_uniid]"
         echo "You can add team repository with -r=[repo_name]"
         echo "You can use your SSH key if you specify --key"
-        echo "You can also add optional argument --realism"
+        echo "You can also add optional argument --realistic"
 	echo "You can use --lite to load the downscaled map version, when facing performance issues"
         exit 0
     fi
@@ -31,7 +31,7 @@ if [ -d $WEBOTS_DIR ]; then
     waiting_time=12
 
     yaw_start=0
-    realism=0
+    realistic=0
     branch=main
     key=0
     team=
@@ -58,8 +58,8 @@ if [ -d $WEBOTS_DIR ]; then
         key=1
         shift
         ;;
-        --realism)
-        realism=1
+        --realistic)
+        realistic=1
         shift
         ;;
 	--lite)
@@ -122,7 +122,7 @@ if [ -d $WEBOTS_DIR ]; then
         exit 1
     fi
 
-    echo "Realism: $realism"
+    echo "realistic: $realistic"
 
     CONTROLLERS_DIR=$SCRIPT_DIR/../../controllers
     echo "Symlinking your solution to controller directory..."

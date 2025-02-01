@@ -1,9 +1,16 @@
 """Robot API."""
 import math
 import numpy as np
+import os
 
 TICKS_PER_RADIANS = 508.8 / (2 * math.pi)  # There are 508.8 ticks per wheel rotation.
 TIME_STEP = 32
+
+class Point:
+    def __init__(self, x, y, z):
+        self.x = x
+        self.y = y
+        self.z = z
 
 class Robot:
     """Robot class."""
@@ -15,9 +22,10 @@ class Robot:
 
         Args:
             args: the arguments string.
-
         """
         self._args = args
+        self._realistic = True if os.getenv("ITI0201_REALISTIC", "0") == "1" else False
+
         self._lidar = Robot._robot.getDevice("rplidar")
         self._lidar.enable(TIME_STEP)
         self._lidar.enablePointCloud()
@@ -71,10 +79,24 @@ class Robot:
 
         Returns:
             The current time in seconds.
-
         """
         return self._robot.getTime()
 
+    def get_simulator(self) -> bool:
+        """Return whether running in simulator or on real robot.
+
+        Returns:
+            True if simulation, False if real robot.
+        """
+        return True
+
+    def get_realistic(self) -> bool:
+        """Return whether running in realistic mode or not.
+
+        Returns:
+            True if realistic, False if not.
+        """
+        return self._realistic
 
     def get_lidar_range_list(self) -> list:
         """Get the list of lidar range readings.
@@ -86,7 +108,15 @@ class Robot:
             Each value represents the range at a specific angle.
 
         """
-        return self._lidar.getRangeImage()
+        if self._realistic:
+            range_list = np.array(self._lidar.getRangeImage())
+            return ((range_list * np.random.uniform(0.96, 1.04,
+                                                    size=range_list.shape)) *
+                    np.random.choice([1, np.nan, float('inf')],
+                                     size=range_list.shape,
+                                     p=[0.996, 0.002, 0.002])).tolist()
+        else:
+            return self._lidar.getRangeImage()
 
     def get_lidar_point_cloud(self) -> list:
         """Get the lidar point cloud data.
@@ -97,7 +127,13 @@ class Robot:
             the coordinates of the point in meters, relative to the sensor's position.
 
         """
-        return self._lidar.getPointCloud()
+        if self._realistic:
+            point_cloud = self._lidar.getPointCloud()
+            x_values = np.array([point.x for point in point_cloud]) * np.random.uniform(0.96, 1.04, size=len(point_cloud))
+            y_values = np.array([point.y for point in point_cloud]) * np.random.uniform(0.96, 1.04, size=len(point_cloud))
+            return [Point(x, y, 0.0) for x, y in zip(x_values, y_values)]
+        else:
+            return self._lidar.getPointCloud()
 
     def set_left_motor_velocity(self, speed: float) -> None:
         """Set the rotational velocity of the left motor.
@@ -108,7 +144,11 @@ class Robot:
                    values indicate backward rotation.
 
         """
-        self._left_motor.setVelocity(speed)
+        if not self._realistic:
+            self._left_motor.setVelocity(speed)
+        else:
+            print("In realistic mode, use set_left_motor_torque() instead!")
+            self._left_motor.setVelocity(0)
 
     def set_right_motor_velocity(self, speed: float) -> None:
         """Set the rotational velocity of the right motor.
@@ -119,7 +159,11 @@ class Robot:
                    values indicate backward rotation.
 
         """
-        self._right_motor.setVelocity(speed)
+        if not self._realistic:
+            self._right_motor.setVelocity(speed)
+        else:
+            print("In realistic mode, use set_right_motor_torque() instead!")
+            self._right_motor.setVelocity(0)
 
     def set_left_motor_torque(self, torque: float) -> None:
         """Adjust the torque for the left motor to control its speed and direction.
