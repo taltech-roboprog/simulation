@@ -29,6 +29,9 @@ class Robot:
         self._lidar = Robot._robot.getDevice("rplidar")
         self._lidar.enable(TIME_STEP)
         self._lidar.enablePointCloud()
+        
+        self.inertial_unit = Robot._robot.getDevice("inertial_unit")
+        self.inertial_unit.enable(TIME_STEP)
 
         self._rgb_camera = Robot._robot.getDevice("rgb_camera")
         self._rgb_camera.enable(TIME_STEP)
@@ -81,6 +84,16 @@ class Robot:
             The current time in seconds.
         """
         return self._robot.getTime()
+        
+    def get_orientation(self):
+        """Returns the robot's orientation (yaw) from the inertial unit.
+        
+        Returns:
+            The current orientation in radians.
+        
+        """
+        rotation = self.inertial_unit.getRollPitchYaw()
+        return rotation[2]
 
     def get_simulator(self) -> bool:
         """Return whether running in simulator or on real robot.
@@ -218,6 +231,15 @@ class Robot:
 
         """
         return math.floor(TICKS_PER_RADIANS * self._right_motor_position.getValue())
+
+    def get_camera_field_of_view(self):
+        """Returns the camera HFOV (Horizontal Field of View).
+        
+        Returns:
+            FOV in radians.
+
+        """
+        return self._rgb_camera.getFov()
 
     def get_camera_rgb_image(self) -> np.ndarray:
         """Return an image from the camera as a NumPy array in BGRA format.

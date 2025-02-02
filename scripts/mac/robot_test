@@ -25,6 +25,7 @@ if [ -x "$WEBOTS_DIR" ]; then
         echo "You can add teammate uni-id (if code is in that student's repository) -t=[teammate_uniid]"
         echo "You can add team repository with -r=[repo_name]"
         echo "You can use your SSH key if you specify --key"
+        echo "You can use --lite to load the downscaled map version, when facing performance issues"
         echo "You can also add optional argument --realistic"
         exit 0
     fi
@@ -39,6 +40,7 @@ if [ -x "$WEBOTS_DIR" ]; then
     realistic=0
     branch=main
     key=0
+    lite=0
     team=
     repo=$DIRECTORY
 
@@ -60,6 +62,10 @@ if [ -x "$WEBOTS_DIR" ]; then
             key=1
             shift
             ;;
+    	    --lite)
+	    lite=1
+	    shift
+	    ;;
             --realistic)
             realistic=1
             shift
@@ -73,6 +79,10 @@ if [ -x "$WEBOTS_DIR" ]; then
     else
         git_address="https://$git_user_name@gitlab.cs.taltech.ee/$git_user_name/$repo.git"
         [[ "$key" -eq 1 ]] && git_address="git@gitlab.cs.taltech.ee:$git_user_name/$repo.git"
+    fi
+    map_file=${map_number}
+    if [[ "$lite" -eq 1 ]]; then
+	map_file="${map_number}_lite"
     fi
 
     echo $git_address
@@ -114,7 +124,7 @@ if [ -x "$WEBOTS_DIR" ]; then
         echo "Webots is running!"
     else
         echo "Webots is not running, starting Webots..."
-        open -a "$WEBOTS_DIR/webots" --args "$SCRIPT_DIR/../../worlds/$exercise_number/$map_number.wbt" &
+        open -a "$WEBOTS_DIR/webots" --args "$SCRIPT_DIR/../../worlds/$exercise_number/${map_file}.wbt" &
     fi
 
     WEBOTS_HOME="$HOME/Applications/Webots.app" "$WEBOTS_DIR/webots-controller" --stdout-redirect --stderr-redirect "$CONTROLLERS_DIR/tb4.py"
