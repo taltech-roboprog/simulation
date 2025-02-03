@@ -7,7 +7,7 @@ SCRIPT_PATH=$(realpath "$0" 2>/dev/null || readlink -f "$0")
 SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
 
 echo "Cleaning old install..."
-$SCRIPT_DIR/uninstall.sh
+"$SCRIPT_DIR/uninstall.sh"
 echo "Creating symlinks..."
 ln -s "$SCRIPT_DIR/robot_test" /usr/bin
 if [ $? -ne 0 ]; then

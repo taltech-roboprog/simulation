@@ -3,7 +3,7 @@
 # THIS FILE IS SUPPOSED TO BE RUN IN "GIT BASH" ON WINDOWS
 
 WEBOTS_DIR="/c/Program Files/Webots/msys64/mingw64/bin"
-INSTALL_DIR=INSTALL_DIR_PLACEHOLDER
+INSTALL_DIR="INSTALL_DIR_PLACEHOLDER"
 
 # Get the absolute path to the script
 SCRIPT_PATH=$(realpath "$0" 2>/dev/null || readlink -f "$0")
@@ -15,7 +15,7 @@ if [[ "$SCRIPT_DIR" == /usr/bin* ]]; then
     SCRIPT_DIR=$INSTALL_DIR
 fi
 
-cd $SCRIPT_DIR
+cd "$SCRIPT_DIR"
 changed=0
 git remote update && git status -uno | grep -q 'Your branch is behind' && changed=1
 if [ $changed = 1 ]; then
