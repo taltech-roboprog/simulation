@@ -14,6 +14,6 @@ if [ $? -ne 0 ]; then
     echo "Run this command from 'Git Bash' in Administrator mode"
 else
     ln -s "$SCRIPT_DIR/key_install" /usr/bin
-    sed -i "s,INSTALL_DIR=INSTALL_DIR_PLACEHOLDER,INSTALL_DIR=$(printf '%q' "$SCRIPT_DIR")," /usr/bin/robot_test
+    sed -i "s,INSTALL_DIR_PLACEHOLDER,$(printf '%q' "$SCRIPT_DIR")," /usr/bin/robot_test
     echo "Finished!"
 fi
