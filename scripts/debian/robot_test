@@ -8,6 +8,17 @@ SCRIPT_PATH=$(realpath "$0" 2>/dev/null || readlink -f "$0")
 # Extract the directory of the script
 SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
 
+cd $SCRIPT_DIR
+changed=0
+git remote update && git status -uno | grep -q 'Your branch is behind' && changed=1
+if [ $changed = 1 ]; then
+    git pull origin main
+    echo "Updated successfully! Run the command again!"
+    exit 0
+else
+    echo "Up-to-date"
+fi
+
 if [ -d $WEBOTS_DIR ]; then
     cd ~
     DIRECTORY="iti0201-2025"
@@ -17,9 +28,10 @@ if [ -d $WEBOTS_DIR ]; then
         echo "You can add git branch name with -b=[branch]"
         echo "You can add teammate uni-id (if code is in that student's repository) -t=[teammate_uniid]"
         echo "You can add team repository with -r=[repo_name]"
-        echo "You can use your SSH key if you specify --key"
-        echo "You can also add optional argument --realistic"
-	echo "You can use --lite to load the downscaled map version, when facing performance issues"
+        echo "Use --realistic to set realistic mode"
+	echo "Use --lite to load downscaled world version for improved performance"
+	echo "Use --clear-cache to update simulator cache"
+        echo "Use --key to use SSH key"
         exit 0
     fi
 
@@ -122,7 +134,12 @@ if [ -d $WEBOTS_DIR ]; then
         exit 1
     fi
 
-    echo "realistic: $realistic"
+    if [[ "$realistic" -eq 1 ]]; then
+        echo "realistic: $realistic"
+	export ITI0201_REALISTIC=1
+    else
+	export ITI0201_REALISTIC=0
+    fi
 
     CONTROLLERS_DIR=$SCRIPT_DIR/../../controllers
     echo "Symlinking your solution to controller directory..."

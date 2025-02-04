@@ -15,6 +15,17 @@ SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
 
 echo "script dir: $SCRIPT_DIR"
 
+cd $SCRIPT_DIR
+changed=0
+git remote update && git status -uno | grep -q 'Your branch is behind' && changed=1
+if [ $changed = 1 ]; then
+    git pull origin main
+    echo "Updated successfully! Run the command again!"
+    exit 0
+else
+    echo "Up-to-date"
+fi
+
 if [ -x "$WEBOTS_DIR" ]; then
     cd ~
     DIRECTORY="iti0201-2025"

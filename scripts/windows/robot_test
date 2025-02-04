@@ -3,7 +3,7 @@
 # THIS FILE IS SUPPOSED TO BE RUN IN "GIT BASH" ON WINDOWS
 
 WEBOTS_DIR="/c/Program Files/Webots/msys64/mingw64/bin"
-INSTALL_DIR=INSTALL_DIR_PLACEHOLDER
+INSTALL_DIR="INSTALL_DIR_PLACEHOLDER"
 
 # Get the absolute path to the script
 SCRIPT_PATH=$(realpath "$0" 2>/dev/null || readlink -f "$0")
@@ -13,6 +13,17 @@ SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
 if [[ "$SCRIPT_DIR" == /usr/bin* ]]; then
     echo "SCRIPT_DIR starts with /usr/bin"
     SCRIPT_DIR=$INSTALL_DIR
+fi
+
+cd "$SCRIPT_DIR"
+changed=0
+git remote update && git status -uno | grep -q 'Your branch is behind' && changed=1
+if [ $changed = 1 ]; then
+    git pull origin main
+    echo "Updated successfully! Run the command again!"
+    exit 0
+else
+    echo "Up-to-date"
 fi
 
 if [ -d "$WEBOTS_DIR" ]; then
@@ -154,7 +165,8 @@ if [ -d "$WEBOTS_DIR" ]; then
 	echo "Map is: '$map_number'"
         start "" "$WEBOTS_DIR/webotsw.exe" ${clearcache} $SCRIPT_DIR/../../worlds/$exercise_number/${map_number}.wbt &
     fi
-    powershell -Command "& \"$(cygpath -w "$WEBOTS_DIR")\\webots-controller.exe\" --stdout-redirect --stderr-redirect \"$(cygpath -w "$CONTROLLERS_DIR")\\tb4.py\""
+    echo ${CONTROLLERS_DIR}
+    "$WEBOTS_DIR/webots-controller.exe" --stdout-redirect --stderr-redirect "$CONTROLLERS_DIR/tb4.py"
 else
     echo "Webots installation directory not found at $WEBOTS_DIR, please specify the correct installation directory!"
 fi
