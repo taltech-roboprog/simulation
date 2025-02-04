@@ -16,6 +16,8 @@ Returns the current elapsed time from the start of the robot's operation in seco
 Returns a list of distance measurements in meters from the robot's LiDAR sensor. The measurements are ordered clockwise when viewed from above, starting from the robot's right side (90 degrees clockwise from the front). This gives you a circular scan of distances to objects around the robot.
 ### get_lidar_point_cloud() -> list
 Returns three-dimensional point cloud data from the LiDAR sensor. Each point in the returned list is represented as an object with 'x', 'y', and 'z' coordinates (in meters) relative to the sensor's position. This provides a detailed 3D representation of the robot's surroundings.
+![Project Workflow](Lidar_overview.png)
+
 
 ## Motor Control and Feedback Methods
 ### set_left_motor_velocity(speed: float) -> None
@@ -41,8 +43,14 @@ Returns an image from the robot's RGB camera as a NumPy array in BGRA format (Bl
 ### get_camera_depth_image() -> np.ndarray
 Returns depth image data from the robot's depth camera as a 2D NumPy array with dimensions (height, width). Each pixel value represents the distance to objects in the scene as a floating-point number.
 ### get_camera_field_of_view() -> float
-
 Returns the cameras horizontal field of view in radians, the value is a float.
+
+## Constants
+### WHEEL_BASE
+Turtlebot global variable that contains the robots wheel base in meters.
+### WHEEL_DIAMETER
+Turtlebot global variable that contains the robot wheel diameter in meters.
+
 ## Infrared Sensor Methods
 ### get_ir_intensities_list() -> list
 Returns a list containing all seven infrared sensor readings in the order: [left, side_left, center_left, center, center_right, side_right, right]. Each value ranges from 0 (far) to 4000 (close).
