@@ -76,6 +76,9 @@ class Robot:
         self._ir_intensity_right.enable(TIME_STEP)
         self._ir_intensity_left = Robot._robot.getDevice("ir_intensity_left")
         self._ir_intensity_left.enable(TIME_STEP)
+        self.WHEEL_BASE = 0.233
+        self.WHEEL_RADIUS = 0.03575
+        self.WHEEL_DIAMETER = self.WHEEL_RADIUS * 2
 
     def get_time(self) -> float:
         """Return the current elapsed time from the start in seconds.
