@@ -163,7 +163,7 @@ if [ -d "$WEBOTS_DIR" ]; then
 		map_number="${map_number}_lite"
 	fi
 	echo "Map is: '$map_number'"
-        start "" "$WEBOTS_DIR/webotsw.exe" ${clearcache} $SCRIPT_DIR/../../worlds/$exercise_number/${map_number}.wbt &
+        start "" "$WEBOTS_DIR/webotsw.exe" ${clearcache} "$SCRIPT_DIR/../../worlds/$exercise_number/${map_number}.wbt" &
     fi
     "$WEBOTS_DIR/webots-controller.exe" --stdout-redirect --stderr-redirect "$CONTROLLERS_DIR/tb4.py"
 else
