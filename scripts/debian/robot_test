@@ -8,7 +8,7 @@ SCRIPT_PATH=$(realpath "$0" 2>/dev/null || readlink -f "$0")
 # Extract the directory of the script
 SCRIPT_DIR=$(dirname "$SCRIPT_PATH")
 
-cd $SCRIPT_DIR
+cd "$SCRIPT_DIR"
 changed=0
 git remote update && git status -uno | grep -q 'Your branch is behind' && changed=1
 if [ $changed = 1 ]; then
@@ -19,7 +19,7 @@ else
     echo "Up-to-date"
 fi
 
-if [ -d $WEBOTS_DIR ]; then
+if [ -d "$WEBOTS_DIR" ]; then
     cd ~
     DIRECTORY="iti0201-2025"
 
@@ -143,8 +143,8 @@ if [ -d $WEBOTS_DIR ]; then
 
     CONTROLLERS_DIR=$SCRIPT_DIR/../../controllers
     echo "Symlinking your solution to controller directory..."
-    rm -f $CONTROLLERS_DIR/robot.py
-    ln -s ~/$DIRECTORY/$exercise_number/robot.py $CONTROLLERS_DIR
+    rm -f "$CONTROLLERS_DIR/robot.py"
+    ln -s ~/$DIRECTORY/$exercise_number/robot.py "$CONTROLLERS_DIR"
 
     if ps aux | grep -v grep | grep webots > /dev/null
     then
@@ -155,10 +155,10 @@ if [ -d $WEBOTS_DIR ]; then
             map_number="${map_number}_lite"
         fi
 	echo "Map is: '$map_number'"
-        __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia setsid webots ${clearcache} $SCRIPT_DIR/../../worlds/$exercise_number/${map_number}.wbt &
+        __NV_PRIME_RENDER_OFFLOAD=1 __GLX_VENDOR_LIBRARY_NAME=nvidia setsid webots ${clearcache} "$SCRIPT_DIR/../../worlds/$exercise_number/${map_number}.wbt" &
     fi
 
-    WEBOTS_HOME=$WEBOTS_DIR $WEBOTS_DIR/webots-controller --stdout-redirect --stderr-redirect $CONTROLLERS_DIR/tb4.py
+    WEBOTS_HOME=$WEBOTS_DIR $WEBOTS_DIR/webots-controller --stdout-redirect --stderr-redirect "$CONTROLLERS_DIR/tb4.py"
 else
     echo "Webots installation directory not found at $WEBOTS_DIR, please specify the correct installation directory!"
 fi
