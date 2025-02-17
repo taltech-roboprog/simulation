@@ -46,8 +46,8 @@ Returns depth image data from the robot's depth camera as a 2D NumPy array with 
 Returns the cameras horizontal field of view in radians, the value is a float.
 
 ## Constants
-### WHEEL_BASE
-Turtlebot global variable that contains the robots wheel base in meters.
+### TRACK_WIDTH
+Turtlebot global variable that contains the distance between left and right wheel in meters.
 ### WHEEL_DIAMETER
 Turtlebot global variable that contains the robot wheel diameter in meters.
 
