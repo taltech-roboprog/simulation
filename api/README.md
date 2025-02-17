@@ -43,6 +43,7 @@ Returns the robots Yaw value from Inertial Measurement unit, this is the robots 
 ## Camera Methods
 ### get_camera_rgb_image() -> np.ndarray
 Returns an image from the robot's RGB camera as a NumPy array in BGRA format (Blue, Green, Red, Alpha channels). The array has dimensions (height, width, 4), where the last dimension represents the BGRA channels (Blue, Green, Red, Alpha). The values are unsigned 8-bit integers.
+
 ![Project Workflow](camera_image_coordinate_system.png)
 
 ### get_camera_depth_image() -> np.ndarray
@@ -51,13 +52,10 @@ Returns depth image data from the robot's depth camera as a 2D NumPy array with 
 Returns the cameras horizontal field of view in radians, the value is a float.
 
 ## Constants
-<<<<<<< HEAD
 ### WHEEL_BASE
 Turtlebot global variable that contains the robots wheel base in meters.
-=======
 ### TRACK_WIDTH
 Turtlebot global variable that contains the distance between left and right wheel in meters.
->>>>>>> 96d4d1acdf0cd9c6a488a636244c8f4b9faa9b0c
 ### WHEEL_DIAMETER
 Turtlebot global variable that contains the robot wheel diameter in meters.
 
