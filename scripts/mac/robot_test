@@ -121,7 +121,12 @@ if [ -x "$WEBOTS_DIR" ]; then
         exit 1
     fi
 
-    echo "realistic: $realistic"
+    if [[ "$realistic" -eq 1 ]]; then
+        echo "realistic: $realistic"
+	export ITI0201_REALISTIC=1
+    else
+	export ITI0201_REALISTIC=0
+    fi
 
     # Updated path for controller directory with permissions
     CONTROLLERS_DIR="$SCRIPT_DIR/../../controllers"
