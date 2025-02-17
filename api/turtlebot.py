@@ -77,6 +77,7 @@ class Robot:
         self._ir_intensity_left = Robot._robot.getDevice("ir_intensity_left")
         self._ir_intensity_left.enable(TIME_STEP)
         self.WHEEL_BASE = 0.233
+        self.TRACK_WIDTH = self.WHEEL_BASE
         self.WHEEL_RADIUS = 0.03575
         self.WHEEL_DIAMETER = self.WHEEL_RADIUS * 2
 
