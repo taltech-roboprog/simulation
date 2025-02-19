@@ -16,10 +16,7 @@ Returns the current elapsed time from the start of the robot's operation in seco
 Returns a list of distance measurements in meters from the robot's LiDAR sensor. The measurements are ordered clockwise when viewed from above, starting from the robot's right side (90 degrees clockwise from the front). This gives you a circular scan of distances to objects around the robot.
 ![Project Workflow](Lidar_overview.png)
 
-<<<<<<< HEAD
-=======
 ![Lidar blind spots](lidar_blind_spots.png)
->>>>>>> 6a9a2e1a9b93efe170ada10234b9001647711508
 ![Project Workflow](lidar_blind_spot_1.png)
 ![Project Workflow](lidar_blind_spot_2.png)
 ![Project Workflow](lidar_blind_spot_visual.png)
