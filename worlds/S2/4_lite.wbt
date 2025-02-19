@@ -49,16 +49,25 @@ LabMazeWall {
 }
 Pipe {
   name "Pipe_1"
-  translation -1.7186473123686392 4.52232088827118 0.105}
+  translation -1.71865 4.40232 0.105
+}
 Pipe {
   name "Pipe_2"
-  translation -1.4249431784776112 4.0273126123087835 0.105}
+  translation -0.83494 4.43731 0.105
+}
 Pipe {
   name "Pipe_3"
-  translation -1.1452455532925412 0.553305738226549 0.105}
+  translation -1.50525 0.823306 0.105
+}
 Pipe {
   name "Pipe_4"
-  translation 0.06934735402440007 3.873931011344731 0.105}
+  translation -0.250653 3.65393 0.105
+}
+Pipe {
+  name "Pipe_4(1)"
+  translation -0.610653 1.18393 0.105
+}
 Pipe {
   name "Pipe_5"
-  translation -0.7198409513912143 4.6712507479811185 0.105}
+  translation -0.109841 2.42125 0.105
+}
