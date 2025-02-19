@@ -2,9 +2,9 @@
 
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Turtlebot4.proto"
-EXTERNPROTO "../ICTLab.proto"
-EXTERNPROTO "../Pipe.proto"
-EXTERNPROTO "../LabMazeWall.proto"
+EXTERNPROTO "/home/anton/gert/simulation/worlds/ICTLab.proto"
+EXTERNPROTO "/home/anton/gert/simulation/worlds/Pipe.proto"
+EXTERNPROTO "/home/anton/gert/simulation/worlds/LabMazeWall.proto"
 
 WorldInfo {
   info [
@@ -15,8 +15,8 @@ WorldInfo {
   optimalThreadCount 2
 }
 Viewpoint {
-  orientation 0.2991029257327517 0.1455492407785716 -0.9430550664340283 2.1413608433984117
-  position 1.3906425644730462 8.626112483322643 4.588629835333301
+  orientation 0.4581089354434275 0.18026211896108893 -0.8704262011994742 2.3921061779254007
+  position 2.1306891095683964 6.546390294862604 7.001916731160147
   follow "Turtlebot4"
   followType "Mounted Shot"
 }
@@ -36,20 +36,28 @@ ICTLab {
   translation 0.317676 -0.066878 -8.88178e-16
 }
 LabMazeWall {
-  translation 0 0 0
 }
 Pipe {
   name "Pipe_1"
-  translation -1.7186473123686392 4.52232088827118 0.105}
+  translation -1.71865 4.40232 0.105
+}
 Pipe {
   name "Pipe_2"
-  translation -1.4249431784776112 4.0273126123087835 0.105}
+  translation -0.83494 4.43731 0.105
+}
 Pipe {
   name "Pipe_3"
-  translation -1.1452455532925412 0.553305738226549 0.105}
+  translation -1.50525 0.823306 0.105
+}
 Pipe {
   name "Pipe_4"
-  translation 0.06934735402440007 3.873931011344731 0.105}
+  translation -0.250653 3.65393 0.105
+}
+Pipe {
+  name "Pipe_4(1)"
+  translation -0.610653 1.18393 0.105
+}
 Pipe {
   name "Pipe_5"
-  translation -0.7198409513912143 4.6712507479811185 0.105}
+  translation -0.109841 2.42125 0.105
+}
