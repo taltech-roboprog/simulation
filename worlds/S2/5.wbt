@@ -12,6 +12,7 @@ WorldInfo {
   ]
   title "TurtleBot4 simulation"
   basicTimeStep 20
+  optimalThreadCount 2
 }
 Viewpoint {
   orientation 0.4238246453677319 0.25768166169571816 -0.8683160894539786 2.0722813356785106
