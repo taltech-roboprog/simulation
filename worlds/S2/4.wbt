@@ -2,9 +2,9 @@
 
 EXTERNPROTO "https://raw.githubusercontent.com/cyberbotics/webots/R2023b/projects/objects/backgrounds/protos/TexturedBackground.proto"
 EXTERNPROTO "https://raw.githubusercontent.com/taltech-roboprog/protos/refs/heads/main/Turtlebot4.proto"
-EXTERNPROTO "/home/anton/gert/simulation/worlds/ICTLab.proto"
-EXTERNPROTO "/home/anton/gert/simulation/worlds/Pipe.proto"
-EXTERNPROTO "/home/anton/gert/simulation/worlds/LabMazeWall.proto"
+EXTERNPROTO "../ICTLab.proto"
+EXTERNPROTO "../Pipe.proto"
+EXTERNPROTO "../LabMazeWall.proto"
 
 WorldInfo {
   info [
