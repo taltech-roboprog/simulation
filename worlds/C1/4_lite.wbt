@@ -25,6 +25,19 @@ Viewpoint {
   follow "Turtlebot4"
   followType "Mounted Shot"
 }
+Floor {
+        name "floor1"
+        translation -0.7 2.5 0
+        size 4.0 6.0
+        tileSize 1 1
+        appearance LabFloor {
+          textureTransform TextureTransform {
+            scale 2 2
+          }
+        }
+}
+
+
 TexturedBackground {
   texture "empty_office"
   skybox FALSE
