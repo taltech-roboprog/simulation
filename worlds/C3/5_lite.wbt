@@ -72,7 +72,7 @@ PipeColor {
 }
 CubeShape {
   name "Pipe_2_Cube"
-  translation -0.23126511212092393 1.57418105103991 0.025
+  translation -0.4412 3.514 0.025
   color Red {
   }
 }
