@@ -38,7 +38,7 @@ TexturedBackground {
   skybox FALSE
 }
 Turtlebot4 {
-  translation 0.328434 3.46752 0.0239119
+  translation 0.328434 3.46752 0.0
   rotation -0.006850491845757097 0.006966321876965675 0.9999522694213846 -1.586075307179586
   controller "<extern>"
   controllerArgs [
